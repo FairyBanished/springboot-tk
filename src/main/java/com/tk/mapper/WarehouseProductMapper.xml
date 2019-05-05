@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tk.mapper.WarehouseProductMapper">
+  <resultMap id="BaseResultMap" type="com.tk.model.WarehouseProduct">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="wp_id" jdbcType="INTEGER" property="wpId" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="w_id" jdbcType="SMALLINT" property="wId" />
+    <result column="current_cnt" jdbcType="INTEGER" property="currentCnt" />
+    <result column="lock_cnt" jdbcType="INTEGER" property="lockCnt" />
+    <result column="in_transit_cnt" jdbcType="INTEGER" property="inTransitCnt" />
+    <result column="average_cost" jdbcType="DECIMAL" property="averageCost" />
+    <result column="modified_time" jdbcType="TIMESTAMP" property="modifiedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    wp_id, product_id, w_id, current_cnt, lock_cnt, in_transit_cnt, average_cost, modified_time
+  </sql>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tk.mapper.ShippingInfoMapper">
+  <resultMap id="BaseResultMap" type="com.tk.model.ShippingInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ship_id" jdbcType="TINYINT" property="shipId" />
+    <result column="ship_name" jdbcType="VARCHAR" property="shipName" />
+    <result column="ship_contact" jdbcType="VARCHAR" property="shipContact" />
+    <result column="telephone" jdbcType="VARCHAR" property="telephone" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="modified_time" jdbcType="TIMESTAMP" property="modifiedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ship_id, ship_name, ship_contact, telephone, price, modified_time
+  </sql>
+  
+  <insert id="save" parameterType="com.tk.model.ShippingInfo">
+  	insert
+  	into shipping_info(<include refid="Base_Column_List"/>) 
+  	values(#{shipId},#{shipName},#{shipContact},#{telephone},#{price},#{modifiedTime})
+  </insert>
+</mapper>

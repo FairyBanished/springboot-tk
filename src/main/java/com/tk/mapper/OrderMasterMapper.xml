@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tk.mapper.OrderMasterMapper">
+  <resultMap id="BaseResultMap" type="com.tk.model.OrderMaster">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="order_sn" jdbcType="BIGINT" property="orderSn" />
+    <result column="customer_id" jdbcType="INTEGER" property="customerId" />
+    <result column="shipping_user" jdbcType="VARCHAR" property="shippingUser" />
+    <result column="province" jdbcType="SMALLINT" property="province" />
+    <result column="city" jdbcType="SMALLINT" property="city" />
+    <result column="district" jdbcType="SMALLINT" property="district" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="payment_method" jdbcType="TINYINT" property="paymentMethod" />
+    <result column="order_money" jdbcType="DECIMAL" property="orderMoney" />
+    <result column="district_money" jdbcType="DECIMAL" property="districtMoney" />
+    <result column="shipping_money" jdbcType="DECIMAL" property="shippingMoney" />
+    <result column="payment_money" jdbcType="DECIMAL" property="paymentMoney" />
+    <result column="shipping_comp_name" jdbcType="VARCHAR" property="shippingCompName" />
+    <result column="shipping_sn" jdbcType="VARCHAR" property="shippingSn" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="shipping_time" jdbcType="TIMESTAMP" property="shippingTime" />
+    <result column="pay_time" jdbcType="TIMESTAMP" property="payTime" />
+    <result column="receive_time" jdbcType="TIMESTAMP" property="receiveTime" />
+    <result column="order_status" jdbcType="TINYINT" property="orderStatus" />
+    <result column="order_point" jdbcType="INTEGER" property="orderPoint" />
+    <result column="invoice_time" jdbcType="VARCHAR" property="invoiceTime" />
+    <result column="modified_time" jdbcType="TIMESTAMP" property="modifiedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    order_id, order_sn, customer_id, shipping_user, province, city, district, address, 
+    payment_method, order_money, district_money, shipping_money, payment_money, shipping_comp_name, 
+    shipping_sn, create_time, shipping_time, pay_time, receive_time, order_status, order_point, 
+    invoice_time, modified_time
+  </sql>
+</mapper>
