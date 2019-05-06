@@ -5,8 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.tk.utils.TkBaseMapper;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import tk.mybatis.spring.annotation.MapperScan;
 
+@EnableSwagger2
 @MapperScan(basePackages = "com.tk.mapper", markerInterface = TkBaseMapper.class)
 @SpringBootApplication
 public class SpringbootTkApplication {
