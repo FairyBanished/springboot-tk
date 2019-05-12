@@ -45,8 +45,9 @@ spring:
       content-type: text/html
     mode: HTML5
     cache: false
-    
 
+  application: 
+    name: springboot-tk
 
 #mybatis相关配置
 mybatis:
@@ -74,3 +75,18 @@ pagehelper:
     reasonable: true
     params: count=countSql
     support-methods-arguments: true
+
+
+# Dubbo 
+dubbo: 
+  registry: 
+    address: zookeeper://169.254.48.105:2181
+    file: E:/dubbo-cache/springboot-tk/dubbo.cache
+  application: 
+    name: springboot-tk
+
+
+server: 
+  port: 8090
+  
+ 

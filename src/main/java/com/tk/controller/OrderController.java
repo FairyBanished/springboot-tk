@@ -1,5 +1,6 @@
 package com.tk.controller;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tk.model.DemoUser;
 import com.tk.model.ShippingInfo;
 import com.tk.service.OrderService;
 
@@ -27,6 +29,11 @@ public class OrderController extends BaseController {
 	@RequestMapping(value="/queryall", method = RequestMethod.GET)
 	public List<ShippingInfo> queryAll() {
 		return orderService.queryAll();
+	}
+	
+	@RequestMapping(value="/get", method = RequestMethod.GET)
+	public DemoUser get() {
+		return new DemoUser("10001","鹿灵犀","123456",new Date(),"GMT");
 	}
 	
 }
